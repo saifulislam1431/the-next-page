@@ -4,7 +4,7 @@ import Book from '../Book/Book';
 
 const Books = () => {
     const allBooks = useLoaderData()
-    console.log(allBooks.books);
+    // console.log(allBooks.books);
     return (
         <div className='grid gap-5 lg:grid-cols-4 sm:grid-cols-2  mt-10'>
             {

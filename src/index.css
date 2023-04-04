@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .badge{
-    @apply bg-sky-600 w-20 p-1 text-white font-medium rounded-lg;
+    @apply bg-sky-600 w-32 text-center p-1 text-white font-medium rounded-lg;
 }
 
 .container{
