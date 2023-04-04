@@ -12,8 +12,16 @@ import Home from './component/Home/Home';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Header></Header>,
+    element: <App></App>,
     children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: 'about',
+        element: <div>This is about</div>
+      },
       {
         path: '/',
         element: <Home></Home>
