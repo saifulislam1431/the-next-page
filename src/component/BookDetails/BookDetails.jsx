@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
+import LoaderSpinner from '../LoaderSpinner/LoaderSpinner';
 
 const BookDetails = () => {
+    // Loading spinner
+    const navigation = useNavigation();
+    if(navigation.state === 'loading'){
+        return <LoaderSpinner />
+    }
+
     const details = useLoaderData();
     const [fold, setFold] = useState(true);
-    console.log(details);
+    // console.log(details);
     const {desc,image,authors,language,price,publisher,rating,title,year} = details;
+
     return (
         <div className=' container py-10 flex flex-col items-center justify-center mx-auto  border-2 border-sky-500'>
 
