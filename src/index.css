@@ -10,3 +10,7 @@
 .badge{
     @apply bg-sky-600 w-20 p-1 text-white font-medium rounded-lg;
 }
+
+.container{
+    @apply px-16 lg:px-28 mt-16;
+}

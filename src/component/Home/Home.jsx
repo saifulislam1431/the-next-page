@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div className='flex flex-col lg:flex-row items-center justify-between gap-3 px-16 lg:px-28 mt-16'>
+        <div className='flex flex-col lg:flex-row items-center justify-center gap-3 container'>
             <div>
                 <p className='badge'>On Sale!</p>
                 <h1 className='font-bold text-4xl mt-5'>A reader lives a
@@ -17,8 +17,11 @@ const Home = () => {
                     <Link to='/about' className='text-lg font-semibold hover:text-sky-600'>Learn More</Link>
                 </div>
             </div>
+            
+            <div>
             <div className='mt-10 lg:mt-0'>
                 <Lottie animationData={bookReading} loop={true}></Lottie>
+            </div>
             </div>
 
         </div>
