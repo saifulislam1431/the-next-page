@@ -13,6 +13,8 @@ const Header = () => {
                 <h1 className='text-2xl font-bold tracking-wide text-slate-800'>The nextPage</h1>
                 </span>                
             </Link>
+
+            {/* Large device layout */}
             <ul className='text-lg font-semibold hidden lg:flex'>
                 <li className='mr-6'>
                     <NavLink to='/' className={({isActive})=> (isActive ? 'text-sky-800' : 'text-sky-500')}>Home</NavLink> 
@@ -24,6 +26,8 @@ const Header = () => {
                 <NavLink to='/about' className={({isActive})=> (isActive ? 'text-sky-800' : 'text-sky-500')}>About Us</NavLink>
                 </li>
             </ul>
+
+            {/* Phone menu layout */}
             <ul className='text-lg font-semibold flex flex-col lg:hidden'>
                 <button onClick={()=>setOpen(!isOpen)}>
 
