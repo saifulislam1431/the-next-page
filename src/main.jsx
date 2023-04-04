@@ -20,6 +20,11 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
+        path: 'books',
+        element: <div>This is books</div>
+
+      },
+      {
         path: 'about',
         element: <About></About>
       },

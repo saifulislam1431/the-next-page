@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import { BookOpenIcon,Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { BookOpenIcon,Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
     const [isOpen, setOpen] = useState(false);
@@ -28,12 +28,12 @@ const Header = () => {
                 <button onClick={()=>setOpen(!isOpen)}>
 
                     {
-                        isOpen ? <XMarkIcon className='h-8 w-8 text-sky-500'/> : <Bars3Icon className='h-8 w-8 text-sky-500' />
+                        isOpen ? <XMarkIcon className='h-8 w-8 text-red-500'/> : <Bars3BottomRightIcon className='h-8 w-8 text-sky-500' />
                     }
 
                 </button>
 
-                <ul className={`text-lg font-semibold flex flex-col justify-center items-center  absolute duration-300 bg-sky-200 w-full py-10 ${isOpen ? 'right-0 top-16' : ' hidden'}`}>
+                <ul className={`text-lg font-semibold flex flex-col justify-center items-center  absolute duration-300 bg-sky-200 w-full py-10 z-40 ${isOpen ? 'right-0 top-16' : ' hidden'}`}>
                 <li className='mr-6'>
                     <NavLink to='/' className={({isActive})=> (isActive ? 'text-sky-800' : 'text-sky-500')}>Home</NavLink> 
                 </li>
