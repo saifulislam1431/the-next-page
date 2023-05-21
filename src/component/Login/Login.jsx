@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
     const [error, setError] = useState("");
-    const { signUp, signIn } = useContext(userContext);
+    const { googleLog, signIn } = useContext(userContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/"
@@ -99,7 +99,7 @@ const Login = () => {
                         <div className='text-center items-center mt-3'>
                             <p className='font-medium'>or Sign in with</p>
                             <div className='my-4 space-x-3 w-full'>
-                                <button onClick={handleGoogleIn} className='inline-flex items-center gap-1 justify-center border border-sky-600 py-2 px-2 rounded-md w-full'>
+                                <button className='inline-flex items-center gap-1 justify-center border border-sky-600 py-2 px-2 rounded-md w-full'   onClick={handleGoogleIn}>
                                     <span>Sign In with</span> <img src={icon} alt="" className='w-6' />
                                 </button>
                             </div>
